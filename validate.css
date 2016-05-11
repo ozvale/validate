@@ -1,0 +1,12 @@
+.validate-fail-input {
+	border: 1px solid #D9534F;
+}
+
+.validate-fail-message {
+	color: #D9534F;
+	font-style: oblique;
+}
+
+.validate-success-input {
+	border: 1px solid #3C763D;
+}
