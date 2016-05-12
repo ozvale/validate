@@ -1,9 +1,9 @@
 # validate
-### Html attribute mark + javascript.Easy to use.
-### Supports multi validations  
-### Supports add global validators
-### Supports add temporary validators
-### Based on jquery. 
+* Html attribute mark + javascript.Easy to use.<br/>
+* Supports multi validations  <br/>
+* Supports add global validators<br/>
+* Supports add temporary validators<br/>
+* Based on jquery. <br/>
 
 ##Example：
 ```html
@@ -25,7 +25,7 @@ optional. format:{validatorKey :validator}.validator discription is below.
 * triggers <br/>
 optional. default is 'blur keyup'.events that input triggers.
 * validatorAttrName <br/>
-optional. default is 'validator'.<input type="text" `validator`="number"/>.you can change to another words if you has already define validator.
+optional. default is 'validator'.<input type="text" `validator`="number"/>.you can change to another words if you already defined validator.
 
 ###  boolean isValid()
 the form validation is pass or not.
