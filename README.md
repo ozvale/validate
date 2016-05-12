@@ -47,17 +47,23 @@
 			$field.siblings('.validate-fail-message').remove();
 		}
 	};
-	```
-	###triggers
-	验证触发事件.默认是'blur keyup'.
-	###validatorAttrName
-	在html标签上标记验证器的属性名称.默认是validator
+```
+###triggers
+验证触发事件.默认是'blur keyup'.
+###validatorAttrName
+在html标签上标记验证器的属性名称.默认是validator
 ##methods
 ###isValid
 指定区域被标记的控件是否验证通过
 ####params
 ####return 
 boolean
+##static methods
+###$validation.putValidator
+全局添加自定义验证器
+####params
+{validatorKey:validator,...}
+
 
 
 
