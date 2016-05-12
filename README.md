@@ -53,15 +53,12 @@
 ###validatorAttrName
 在html标签上标记验证器的属性名称.默认是validator
 ##methods
-###isValid
+###boolean isValid()
 指定区域被标记的控件是否验证通过
-####params
-####return 
-boolean
 ##static methods
-###$validation.putValidator
+###$validation.putValidator(options)
 全局添加自定义验证器
-####params
+####options
 {validatorKey:validator,...}
 
 
