@@ -19,11 +19,11 @@ javascript
 
 ###  validate(options)
 initiate a form under validating. 
-	* validators
+* validators \<\br>
 optional. format:{validatorKey :validator}.validator discription is below.
-	* triggers
+* triggers
 optional. default is 'blur keyup'.events that input triggers.
-	* validatorAttrName
+* validatorAttrName
 optional. default is 'validator'.<input type="text" `validator`="number"/>.you can change to another words if you has already define validator.
 
 ###  boolean isValid()
