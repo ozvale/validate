@@ -5,10 +5,11 @@
 内置部分验证方法.
 支持自定义添加验证方法.
 支持局部自定义验证方法.
-#示例：
-<code>
+##示例：
+```html
+html部分
 <form>
 <input type="text" validator="notEmpty"/>
 <input type="text" validator="number"/>
 </form>
-</code>
+```
