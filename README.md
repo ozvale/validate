@@ -18,13 +18,21 @@ js 部分
 提交前：$('form').isValid();
 ```
 ##jquery 拓展方法
-### validate(options)
+### * validate(options)
 初始化一个区域已标记组件的验证监听.
-####options
-#####validators
+参数项介绍：
+####validators
 自定义验证器组.格式为{'名称':validator}.validator见下面的介绍.
-#####validator(验证器)
-这是一个默认的validator对象定义.你可以仅选择其中需要改变的属性和方法进行覆盖.一般情况下你只需要定义patten和validate.
+####triggers
+验证触发事件.默认是'blur keyup'.
+####validatorAttrName
+在html标签上标记验证器的属性名称.默认是validator
+
+### * isValid()
+指定区域被标记的控件是否验证通过
+
+## validator(验证器)
+下面是一个默认的validator对象定义.你可以仅选择其中需要改变的属性和方法进行覆盖.一般情况下你只需要定义patten和validate.
 ```javascript
 // 元素验证器默认对象
 	Validation.defaultValidator = {
@@ -52,15 +60,11 @@ js 部分
 		}
 	};
 ```
-#####triggers
-验证触发事件.默认是'blur keyup'.
-#####validatorAttrName
-在html标签上标记验证器的属性名称.默认是validator
-### isValid()
-指定区域被标记的控件是否验证通过
+
 ##Static Attributes
 ####$validate.validators
 全局验证器.目前已定义了notEmpty,maxLength(length),number,email,celphone
+
 ##Static Methods
 ###$validation.putValidator(options)
 全局添加自定义验证器
