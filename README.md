@@ -19,7 +19,7 @@ javascript
 
 ###  validate(options)
 initiate a form under validating. 
-* validators \<br/>
+* validators <br/>
 optional. format:{validatorKey :validator}.validator discription is below.
 * triggers
 optional. default is 'blur keyup'.events that input triggers.
