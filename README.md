@@ -6,26 +6,32 @@
 * Based on jquery. <br/>
 
 ##Example：
+html:
 ```html
-html
 <form>
    <input type="text" validator="notEmpty;maxLength(10)"/>
    <input type="text" validator="number"/>
 </form>
-javascript
-	initiate:$('form').validate(options);
-	before submit:$('form').isValid();
+```
+javascript:
+```javascript
+//initialize
+$('form').validate();
+//before submit
+if($('form').isValid()){
+//do sth.
+}
 ```
 ## jQuery.fn..
 
 ###  validate(options)
 initiate a form under validating. 
 * validators <br/>
-optional. format:{validatorKey :validator}.validator discription is below.
+{validatorKey :validator}.you can get 'validator' description below.
 * triggers <br/>
-optional. default is 'blur keyup'.events that input triggers.
+events that input triggers.default is 'blur keyup'.
 * validatorAttrName <br/>
-optional. default is 'validator'.<input type="text" `validator`="number"/>.you can change to another words if you already defined validator.
+<input type="text" `validator`="number"/>.default is 'validator'.you can change to another words if you already defined validator.
 
 ###  boolean isValid()
 the form validation is pass or not.
