@@ -31,7 +31,10 @@ initiate a form under validating.
 * triggers <br/>
 events that input triggers.default is 'blur keyup'.
 * validatorAttrName <br/>
-<input type="text" `validator`="number"/>.default is 'validator'.you can change to another words if you already defined validator.
+```html
+<input type="text" `validator`="number"/>
+```
+input attribute name. default is 'validator'.you can change to another words if you already defined a 'validator' attibute.
 
 ###  boolean isValid()
 the form validation is pass or not.
