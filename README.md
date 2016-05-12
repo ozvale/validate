@@ -1,42 +1,41 @@
 # validate
-###极简约的表单验证工具.
-###支持html属性标记.
-###支持多项同时验证.  
-###内置部分验证方法.  
-###支持自定义添加验证方法. 
-###支持局部自定义验证方法. 
-###基于jquery. 
+### Html attribute mark + javascript.Easy to use.
+### Supports multi validations  
+### Supports add global validators
+### Supports add temporary validators
+### Based on jquery. 
 ##示例：
 ```html
-html部分
+html
 <form>
-<input type="text" validator="notEmpty;maxLength(10)"/>
-<input type="text" validator="number"/>
+   <input type="text" validator="notEmpty;maxLength(10)"/>
+   <input type="text" validator="number"/>
 </form>
-js 部分
-初始化：$('form').validate(options);
-提交前：$('form').isValid();
+javascript
+	initiate:
+	$('form').validate(options);
+	before submit:
+	$('form').isValid();
 ```
-##jquery 拓展方法
-### * validate(options)
-初始化一个区域已标记组件的验证监听.\<br>  
-参数项介绍：
-####validators
-自定义验证器组.格式为{'名称':validator}.validator见下面的介绍.
-####triggers
-验证触发事件.默认是'blur keyup'.
-####validatorAttrName
-在html标签上标记验证器的属性名称.默认是validator
+## jQuery.fn..
 
-### * isValid()
-指定区域被标记的控件是否验证通过
+###  validate(options)
+initiate a form under validating. 
+* validators
+optional. format:{validatorKey :validator}.validator discription is below.
+* triggers
+optional. default is 'blur keyup'.events that input triggers.
+* validatorAttrName
+optional. default is 'validator'.<input type="text" `validator`="number"/>.you can change to another words if you has already define validator.
 
-## validator(验证器)
-下面是一个默认的validator对象定义.你可以仅选择其中需要改变的属性和方法进行覆盖.一般情况下你只需要定义patten和validate.
+### * boolean isValid()
+the form validation is pass or not.
+
+## validator
+this is a default validator definition.you can choose some of attributes or methods to overwrite ,usually we only define 'patten' and 'validate',those are necessary.
 ```javascript
-// 元素验证器默认对象
 	Validation.defaultValidator = {
-		// 需要匹配的正则表达式
+		// match regExp.like /notEmpty/.
 		patten : '',
 		// 元素验证函数.需返回true或false
 		validate : function($field, expr) {
@@ -63,11 +62,11 @@ js 部分
 
 ##Static Attributes
 ####$validate.validators
-全局验证器.目前已定义了notEmpty,maxLength(length),number,email,celphone
+global validators.including notEmpty,maxLength(length),number,email,celphone...
 
 ##Static Methods
 ###$validation.putValidator(options)
-全局添加自定义验证器
+add or overwrite global validators.
 ####options
 {validatorKey:validator,...}
 
