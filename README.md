@@ -7,16 +7,16 @@
 支持局部自定义验证方法.
 ##示例：
 ```html
-*html部分
+html部分
 <form>
-<input type="text" validator="notEmpty"/>
+<input type="text" validator="notEmpty;maxLength(10)"/>
 <input type="text" validator="number"/>
 </form>
-*js 部分
+js 部分
 初始化：$('form').validate(options);
 提交前：$('form').isValid();
 ```
-##options
+##Options
 ###validators
 自定义验证器组.格式为{'名称':validator}.validator见下面的介绍.
 ###validator(验证器)
@@ -52,10 +52,13 @@
 验证触发事件.默认是'blur keyup'.
 ###validatorAttrName
 在html标签上标记验证器的属性名称.默认是validator
-##methods
+##Methods
 ###boolean isValid()
 指定区域被标记的控件是否验证通过
-##static methods
+###Static Attributes
+####$validate.validators
+全局验证器.目前已定义了notEmpty,maxLength(length),number,email,celphone
+##Static Methods
 ###$validation.putValidator(options)
 全局添加自定义验证器
 ####options
