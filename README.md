@@ -5,6 +5,7 @@
 内置部分验证方法.
 支持自定义添加验证方法.
 支持局部自定义验证方法.
+基于jquery.
 ##示例：
 ```html
 html部分
@@ -16,10 +17,13 @@ js 部分
 初始化：$('form').validate(options);
 提交前：$('form').isValid();
 ```
-##Options
-###validators
+##jquery 拓展方法
+### validate(options)
+初始化一个区域已标记组件的验证监听.
+####options
+#####validators
 自定义验证器组.格式为{'名称':validator}.validator见下面的介绍.
-###validator(验证器)
+#####validator(验证器)
 这是一个默认的validator对象定义.你可以仅选择其中需要改变的属性和方法进行覆盖.一般情况下你只需要定义patten和validate.
 ```javascript
 // 元素验证器默认对象
@@ -48,14 +52,13 @@ js 部分
 		}
 	};
 ```
-###triggers
+#####triggers
 验证触发事件.默认是'blur keyup'.
-###validatorAttrName
+#####validatorAttrName
 在html标签上标记验证器的属性名称.默认是validator
-##Methods
-###boolean isValid()
+### isValid()
 指定区域被标记的控件是否验证通过
-###Static Attributes
+##Static Attributes
 ####$validate.validators
 全局验证器.目前已定义了notEmpty,maxLength(length),number,email,celphone
 ##Static Methods
