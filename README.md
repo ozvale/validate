@@ -21,9 +21,9 @@ javascript
 initiate a form under validating. 
 * validators <br/>
 optional. format:{validatorKey :validator}.validator discription is below.
-* triggers
+* triggers <br/>
 optional. default is 'blur keyup'.events that input triggers.
-* validatorAttrName
+* validatorAttrName <br/>
 optional. default is 'validator'.<input type="text" `validator`="number"/>.you can change to another words if you has already define validator.
 
 ###  boolean isValid()
