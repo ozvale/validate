@@ -7,9 +7,20 @@
 支持局部自定义验证方法.
 ##示例：
 ```html
-html部分
+*html部分
 <form>
 <input type="text" validator="notEmpty"/>
 <input type="text" validator="number"/>
 </form>
+*js 部分
+初始化：$('form').validate(options);
+提交前：$('form').isValid();
 ```
+##参数
+```json
+{validators:{key:validator},
+triggers:'',
+validatorAttrName:''}
+```
+
+
