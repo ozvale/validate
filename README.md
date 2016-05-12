@@ -12,23 +12,21 @@ html
    <input type="text" validator="number"/>
 </form>
 javascript
-	initiate:
-	$('form').validate(options);
-	before submit:
-	$('form').isValid();
+	initiate:$('form').validate(options);
+	before submit:$('form').isValid();
 ```
 ## jQuery.fn..
 
 ###  validate(options)
 initiate a form under validating. 
-* validators
+	* validators
 optional. format:{validatorKey :validator}.validator discription is below.
-* triggers
+	* triggers
 optional. default is 'blur keyup'.events that input triggers.
-* validatorAttrName
+	* validatorAttrName
 optional. default is 'validator'.<input type="text" `validator`="number"/>.you can change to another words if you has already define validator.
 
-### * boolean isValid()
+###  boolean isValid()
 the form validation is pass or not.
 
 ## validator
