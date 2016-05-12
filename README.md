@@ -4,7 +4,8 @@
 ### Supports add global validators
 ### Supports add temporary validators
 ### Based on jquery. 
-##示例：
+
+##Example：
 ```html
 html
 <form>
