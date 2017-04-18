@@ -1,5 +1,4 @@
 // form表单元素验证器
-// 吴志文
 (function($) {
 	var Validation = function($scope, options) {
 		options = options || {};
